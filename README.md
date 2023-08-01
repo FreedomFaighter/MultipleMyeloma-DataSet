@@ -7,8 +7,6 @@ Krall JM, Uthoff VA, Harley JB. A step-up procedure for selecting variables asso
 
 # SAS Read file
 ```
-data MultipleMyeloma;
-  infile "MultipleMyeloma.prn" firstobs=2 delimiter=" ";
-  input Case t tprime ad x0 x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 x16;
+proc import datafile=‘MultipleMyeloma.csv’ out=work.multipleMyelomaSurvivalData dbms=CSV;
 run;
 ```
